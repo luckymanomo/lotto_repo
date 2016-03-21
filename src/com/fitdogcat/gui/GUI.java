@@ -1,4 +1,4 @@
-package com.fitdogcat;
+package com.fitdogcat.gui;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

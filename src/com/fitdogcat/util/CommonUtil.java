@@ -4,8 +4,8 @@ import java.io.File;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.JavaType;
-import com.fitdogcat.LotteryBean;
 import com.fitdogcat.background.FetchingRunner;
+import com.fitdogcat.gui.LotteryBean;
 
 public class CommonUtil {
 	public static List<LotteryBean> getLottoListBean(String dateStr){

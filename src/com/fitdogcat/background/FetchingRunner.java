@@ -10,10 +10,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+import org.apache.log4j.Logger;
+
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fitdogcat.LotteryBean;
+import com.fitdogcat.gui.LotteryBean;
 import com.fitdogcat.util.DataCollection;
 
 public class FetchingRunner {
@@ -24,6 +26,7 @@ public class FetchingRunner {
 	public static SimpleDateFormat dateFileStr=new SimpleDateFormat("yyyyMMdd",new Locale("en","EN"));
 	public static String url="http://lotto.thaiza.com/ตรวจผลสลากกินแบ่งรัฐบาล-ตรวจหวย-งวดประจำวันที่-";
 	public static  List<String> dateList;
+	final static Logger logger = Logger.getLogger(FetchingRunner.class);
 	public static void main(String[] args){
 		final int second=10;
 		DataCollection.secondTimeout=10;
@@ -46,11 +49,12 @@ public class FetchingRunner {
 						if(file.isFile() && file.exists()){
 							if(hasPendingResult(file)){
 								System.out.println(fileStr+" is pending result...");
+								logger.debug(fileStr+" is pending result...");
 								List<LotteryBean> lotteryBeans=DataCollection.collectLotteryBean(url+dateList.get(0));
 								String dateFileName=dateFileStr.format(simpleDateFormat.parse(dateList.get(0)));
 								mapper.writeValue(new File(lottoFileBackup.getAbsoluteFile()+File.separator+dateFileName), lotteryBeans);
 								System.out.println(dateFileName+" was created under "+lottoFileBackup.getAbsolutePath());
-								
+								logger.debug(dateFileName+" was created under "+lottoFileBackup.getAbsolutePath());
 							}
 						}
 					} catch (Exception e) {
@@ -73,10 +77,12 @@ public class FetchingRunner {
 				
 				if(Arrays.asList(lottoFileBackup.list()).contains(dateFileName)){
 					System.out.println(dateFileName+" was found under "+lottoFileBackup.getAbsolutePath());
+					logger.debug(dateFileName+" was found under "+lottoFileBackup.getAbsolutePath());
 				}else{
 					List<LotteryBean> lotteryBeans=DataCollection.collectLotteryBean(url+dateStr);
 					mapper.writeValue(new File(lottoFileBackup.getAbsoluteFile()+File.separator+dateFileName), lotteryBeans);
 					System.out.println(dateFileName+" was created under "+lottoFileBackup.getAbsolutePath());
+					logger.debug(dateFileName+" was created under "+lottoFileBackup.getAbsolutePath());
 				}
 				
 				

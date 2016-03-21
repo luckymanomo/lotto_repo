@@ -20,7 +20,7 @@ import javax.swing.JProgressBar;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import com.fitdogcat.LotteryBean;
+import com.fitdogcat.gui.LotteryBean;
 
 public class DataCollection {
 	public static Proxy proxy;
