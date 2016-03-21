@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" pageWidth="595" pageHeight="842" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" uuid="4957951f-2599-4383-8b45-d61a0c744a5b">
+	<property name="ireport.zoom" value="1.024520183047608"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="Table Dataset 1" uuid="bb437c4e-8d8b-4253-8105-432a8e1d4a94"/>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="job" class="java.lang.String"/>
+	<field name="salary" class="java.lang.Double"/>
+	<variable name="variable1" class="java.lang.Integer" resetType="None" incrementType="Column" calculation="Count">
+		<initialValueExpression><![CDATA[1]]></initialValueExpression>
+	</variable>
+	<group name="job">
+		<groupExpression><![CDATA[$F{job}]]></groupExpression>
+	</group>
+	<title>
+		<band height="30" splitType="Stretch">
+			<elementGroup>
+				<rectangle radius="15">
+					<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="575" height="30" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#9A449B" uuid="6e1d8495-d175-4038-93f0-ed1bdbf2f787"/>
+					<graphicElement>
+						<pen lineStyle="Solid" lineColor="#A1789A"/>
+					</graphicElement>
+				</rectangle>
+				<frame>
+					<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="550" y="15" width="25" height="15" isPrintWhenDetailOverflows="true" backcolor="#9A449B" uuid="03cf1b6b-11ff-4c4b-9f3d-b7bcddfb8f70"/>
+					<box>
+						<pen lineColor="#A1789A"/>
+						<topPen lineColor="#A1789A"/>
+						<leftPen lineColor="#A1789A"/>
+						<bottomPen lineColor="#A1789A"/>
+						<rightPen lineColor="#A1789A"/>
+					</box>
+				</frame>
+				<frame>
+					<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="15" width="25" height="15" isPrintWhenDetailOverflows="true" backcolor="#9A449B" uuid="24e1403b-2338-477e-ba39-730d1ed795a4"/>
+					<box>
+						<pen lineColor="#A1789A"/>
+						<topPen lineColor="#A1789A"/>
+						<leftPen lineColor="#A1789A"/>
+						<bottomPen lineColor="#A1789A"/>
+						<rightPen lineColor="#A1789A"/>
+					</box>
+				</frame>
+			</elementGroup>
+			<staticText>
+				<reportElement x="0" y="0" width="575" height="30" forecolor="#F4D9F6" uuid="341e90f5-eb78-4239-9150-66d7b738bc1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="JasmineUPC" size="24"/>
+				</textElement>
+				<text><![CDATA[ผลการออกสลากกินแบ่งฯ ฉบับมาตรฐาน เรียงตามตัวเลข]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="391" splitType="Stretch">
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="575" height="391" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#9A449B" uuid="67839544-205d-4f45-ac3f-4aa1a86a2030"/>
+			</frame>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="5" y="0" width="280" height="20" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF" uuid="84fc44bb-976f-4b20-aa46-d845c5cac584"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="5" y="22" width="280" height="20" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="0c22f795-8777-4773-a4c1-9559a6c60f8b"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="5" y="44" width="139" height="20" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF" uuid="018a8a1e-630c-4775-8757-4da68184db78"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="146" y="44" width="139" height="20" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF" uuid="b3f86916-8e3d-4c40-b401-3154de312652"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="289" y="0" width="280" height="20" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF" uuid="df4b0366-c7bf-43c6-8e88-fc2d2c54953a"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="5" y="66" width="217" height="40" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="88ccb4b2-ca7f-4ba7-b16b-6373ef9294cd"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="224" y="66" width="61" height="40" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="321f1e6d-0976-42ac-a244-7e69ddcf5b3a"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="5" y="108" width="280" height="20" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="9b6bc17e-9652-4c6f-9d18-211f3e67a9a1"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="5" y="130" width="280" height="86" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF" uuid="41d9190a-ae14-44a1-972a-9134ddb121db"/>
+			</frame>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="15" y="132" width="120" height="40" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="0b61abe5-64db-4410-9e57-214070c62b96"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="15" y="174" width="120" height="40" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="afce161b-17f4-4074-9625-75e4cd8f6f0e"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="155" y="174" width="120" height="40" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="a8c892a6-87ba-45b3-b5b1-115131a9cc68"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="155" y="132" width="120" height="40" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#DEC3E2" uuid="8e9de635-697d-4550-bbf3-df1a747ce580"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#A1789A"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+		<band height="391">
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="575" height="391" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#9A449B" uuid="f291d6d9-0ca2-4af0-aade-0e97dd1a0a11"/>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30">
+			<elementGroup>
+				<rectangle radius="15">
+					<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="575" height="30" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#9A449B" uuid="efe9bc09-c26c-49d1-808a-f43e51e07b6c"/>
+					<graphicElement>
+						<pen lineStyle="Solid" lineColor="#A1789A"/>
+					</graphicElement>
+				</rectangle>
+				<frame>
+					<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="550" y="0" width="25" height="15" isPrintWhenDetailOverflows="true" backcolor="#9A449B" uuid="fe11fd75-69b2-4058-bfad-e0f34c640217"/>
+					<box>
+						<pen lineColor="#A1789A"/>
+						<topPen lineColor="#A1789A"/>
+						<leftPen lineColor="#A1789A"/>
+						<bottomPen lineColor="#A1789A"/>
+						<rightPen lineColor="#A1789A"/>
+					</box>
+				</frame>
+				<frame>
+					<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="25" height="15" isPrintWhenDetailOverflows="true" backcolor="#9A449B" uuid="67e2ef45-412b-412f-bbc3-27a7cf23b6bf"/>
+					<box>
+						<pen lineColor="#A1789A"/>
+						<topPen lineColor="#A1789A"/>
+						<leftPen lineColor="#A1789A"/>
+						<bottomPen lineColor="#A1789A"/>
+						<rightPen lineColor="#A1789A"/>
+					</box>
+				</frame>
+			</elementGroup>
+		</band>
+	</pageFooter>
+</jasperReport>
