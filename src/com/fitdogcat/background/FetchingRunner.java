@@ -21,7 +21,7 @@ import com.fitdogcat.util.DataCollection;
 public class FetchingRunner {
 	
 	public static ObjectMapper mapper = new ObjectMapper();
-	public static File lottoFileBackup=new File("./lottoBackup");
+	public static File lottoFileBackup=new File("d:/temp/lottoBackup");
 	public static SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd-MMMM-yyyy",new Locale("th","TH"));
 	public static SimpleDateFormat dateFileStr=new SimpleDateFormat("yyyyMMdd",new Locale("en","EN"));
 	public static String url="http://lotto.thaiza.com/ตรวจผลสลากกินแบ่งรัฐบาล-ตรวจหวย-งวดประจำวันที่-";
@@ -30,7 +30,7 @@ public class FetchingRunner {
 	public static void main(String[] args){
 		final int second=10;
 		DataCollection.secondTimeout=10;
-		DataCollection.initAuthenticator();
+		//DataCollection.initAuthenticator();
 		
 		dateList=DataCollection.collectDate("http://www.thaiza.com",null);
 		

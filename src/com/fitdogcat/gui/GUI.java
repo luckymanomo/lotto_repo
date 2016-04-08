@@ -39,7 +39,7 @@ public class GUI extends JFrame{
 		setLocationRelativeTo(null);
 		
 		DataCollection.secondTimeout=5;
-		DataCollection.initAuthenticator();
+		//DataCollection.initAuthenticator();
 		
 		// ProgressBar
 		progressBar=new JProgressBar();
@@ -55,6 +55,8 @@ public class GUI extends JFrame{
 		});
 		final JTextArea jTextArea=new JTextArea();
 		final JButton button=new JButton("Get Data");
+		final JScrollPane jScrollPane=new JScrollPane(jTextArea);
+		add(jScrollPane,BorderLayout.CENTER);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//if(jList!=null) mainInstance.remove(jList);
@@ -63,7 +65,9 @@ public class GUI extends JFrame{
 					public void run() {
 						//button.setEnabled(false);
 						
-						//while(true){
+						while(true){
+							add(jScrollPane,BorderLayout.CENTER);
+						
 							String dateStr=comboBox.getSelectedItem().toString();
 							List<LotteryBean> lotteryBeans=CommonUtil.getLottoListBean(dateStr);
 							System.out.println("Retrieve from a file");
@@ -89,12 +93,13 @@ public class GUI extends JFrame{
 							mainInstance.validate();
 							mainInstance.repaint();
 							
-						/*	try {
+							try {
 								Thread.sleep(15000);
 								mainInstance.remove(jScrollPane);
 							} catch (Exception e) {}
-						}*/
-						
+							
+							
+						}
 					}
 				}).start();
 				
@@ -102,7 +107,7 @@ public class GUI extends JFrame{
 			}
 		});
 		add(button,BorderLayout.SOUTH);
-		add(new JScrollPane(jTextArea),BorderLayout.CENTER);
+		
 	}
 	public static void main(String[] args){
 		EventQueue.invokeLater(new Runnable() {
